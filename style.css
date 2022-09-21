@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    /* box model , border and padding won't change layout unless border-box */
+}
+
+.container {
+    outline: 1px solid red;
+}
+
+.container {
+    height: 300px;
+}
+
+.red,
+.blue,
+.green {
+    /* height: 100px; */
+    border: 10px solid blue;
+    padding: 10px;
+    margin: 10px;
+}
+
+.red {
+    margin: 10px;
+}
+
+.blue {
+    margin: 30px;
+}
+
+
+/* this container def overrides previous */
+/* can use specificity calculator to further understand override (if different selectors used) */
+/* add more info to selector to make it more specific */
+/* devtools under styles will cross out styling that has been overridden */
+.container {
+    height: 1000px;
+}
+
+/* only a div in container.main that has a child div of red */
+
+div.container.main>div.red {
+    font-weight: bold;
+}
